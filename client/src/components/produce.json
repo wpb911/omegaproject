@@ -1,0 +1,311 @@
+[
+    {
+        "id": 0,
+        "name": "All Produce"
+    },
+    {
+        "id": 1,
+        "name": "Apples",
+        "select": "Apples are available fresh, dried and as 100% juice for good nutrition and convenience. If selecting fresh, choose firm, shiny, smooth-skinned apples with intact stems."
+    },
+    {
+        "id": 2,
+        "name": "Apricots",
+        "select": "Apricots are available fresh, canned and dried for good nutrition and convenience. If selecting fresh, choose apricots that are plump, firm and uniformly colored."
+    },
+    {
+        "id": 3,
+        "name": "Asparagus",
+        "select": "Asparagus is available fresh, frozen and canned for good nutrition and convenience. If selecting fresh, choose odorless asparagus stalks with dry, tight tips."
+    },
+    {
+        "id": 4,
+        "name": "Avocados",
+        "select": "Choose avocados with firm skin and no soft spots. The easiest way to tell if an avocado is ready for immediate use is to gently squeeze the fruit in the palm of your hand. Ripe, ready-to-eat fruit will yield to gentle pressure."
+    },
+    {
+        "id": 5,
+        "name": "Bananas",
+        "select": "Bananas are available fresh, frozen and dried for good nutrition and convenience. If selecting fresh, choose bananas without cuts. They should be firm, without bruises. Bananas ripen after harvest, so the greener they are, the longer they have to ripen on the counter."
+    },
+    {
+        "id": 6,
+        "name": "Beets",
+        "select": "Beets should be crisp and firm to the touch. Look for those with smooth skin free of cuts and soft spots."
+    },
+    {
+        "id": 7,
+        "name": "Bell Peppers",
+        "select": "Bell peppers are available fresh, frozen and canned for good nutrition and convenience. If selecting fresh, choose firm, brightly colored peppers with tight skin that are heavy for their size. Avoid dull, shriveled or pitted peppers."
+    },
+    {
+        "id": 8,
+        "name": "Blackberries",
+        "select": "Blackberries are available fresh and frozen for good nutrition and convenience. If selecting fresh, choose blackberries that are shiny and not bruised or leaking."
+    },
+    {
+        "id": 9,
+        "name": "Blueberries",
+        "select": "Blueberries are available fresh, frozen, canned and dried for nutrition and convenience. If selecting fresh, choose firm, plump, dry blueberries with dusty blue color."
+    },
+    {
+        "id": 10,
+        "name": "Broccoli",
+        "select": "Broccoli is available fresh or frozen for good nutrition and convenience. If selecting fresh, choose odorless broccoli heads with tight, bluish-green florets."
+    },
+    {
+        "id": 11,
+        "name": "Brussels Sprouts",
+        "select": "Brussels Sprouts are available fresh and frozen for good nutrition and convenience. If selecting fresh, choose firm, compact, bright green Brussels sprouts heads. Buy on stalk when possible."
+    },
+    {
+        "id": 12,
+        "name": "Cabbage",
+        "select": "When selecting cabbage, look for solid, heavy heads with leaves free of discoloration."
+    },
+    {
+        "id": 13,
+        "name": "Cantaloupe",
+        "select": "Choose fragrant, symmetrical cantaloupes, heavy for size with no visible bruises and yellow or cream undertone. Stem and end should give to gentle pressure."
+    },
+    {
+        "id": 14,
+        "name": "Carrots",
+        "select": "Carrots are available fresh, frozen, canned and as 100% juice for good nutrition and convenience. If selecting fresh, choose well-shaped, smooth, firm, crisp carrots with deep color and fresh, green tops."
+    },
+    {
+        "id": 15,
+        "name": "Cauliflower",
+        "select": "Cauliflower is available fresh and frozen for good nutrition and convenience. If selecting fresh, choose cauliflower with compact, creamy white curds and bright green, firmly attached leaves."
+    },
+    {
+        "id": 16,
+        "name": "Celery",
+        "select": "Choose straight, rigid celery stalks with fresh leaves. Avoid pithy, woody or limp stalks. Should smell fresh, not musty."
+    },
+    {
+        "id": 17,
+        "name": "Cherries",
+        "select": "Cherries are available fresh, frozen, canned and dried for good nutrition and convenience. If selecting fresh, choose firm, red cherries with stems attached. Avoid soft or shriveled cherries."
+    },
+    {
+        "id": 18,
+        "name": "Collard Greens",
+        "select": "Collard greens are available fresh, frozen or canned for good nutrition and convenience. If selecting fresh, choose bunches with dark green leaves with no yellowing."
+    },
+    {
+        "id": 19,
+        "name": "Corn",
+        "select": "Sweet corn is available fresh, frozen and canned for good nutrition and convenience. If selecting fresh, choose ears with green husks, fresh silks and tight rows of kernels."
+    },
+    {
+        "id": 20,
+        "name": "Cucumbers",
+        "select": "Choose firm, cucumbers with dark green color, heavy for size."
+    },
+    {
+        "id": 21,
+        "name": "Eggplant",
+        "select": "Choose eggplants that are heavy for their size and without cracks or discolorations."
+    },
+    {
+        "id": 22,
+        "name": "Garlic",
+        "select": "Choose garlic that is plump, dry and firm. Fresh garlic should be white to off-white."
+    },
+    {
+        "id": 23,
+        "name": "Ginger Root",
+        "select": "Choose robust firm roots with a spicy fragrance and smooth skin. Ginger root should not be cracked or withered."
+    },
+    {
+        "id": 24,
+        "name": "Grapes",
+        "select": "Grapes are available fresh, dried and as 100% juice for good nutrition and convenience. If selecting fresh, choose plump, firm grapes firmly attached to the stem."
+    },
+    {
+        "id": 25,
+        "name": "Green Beans",
+        "select": "Green beans are available fresh, frozen and canned for good nutrition and convenience. If selecting fresh, choose well colored beans that snap easily when bent."
+    },
+    {
+        "id": 26,
+        "name": "Honeydew Melons",
+        "select": "Choose well-shaped honeydew melons that are nearly spherical. Should have a waxy, firm, not fuzzy, surface and feel heavy for size. Color is determined by sunlight position and doesn't affect quality."
+    },
+    {
+        "id": 27,
+        "name": "Kale",
+        "select": "Kale is available fresh and frozen for good nutrition and convenience. If selecting fresh, choose dark colored kale bunches. Avoid brown or yellow leaves."
+    },
+    {
+        "id": 28,
+        "name": "Kiwis",
+        "select": "Choose slightly firm kiwis with a rough, fuzzy skin."
+    },
+    {
+        "id": 29,
+        "name": "Leeks",
+        "select": "Choose firm, crisp stalks with as much white and light green regions as possible. Avoid leeks with yellow or withered tops."
+    },
+    {
+        "id": 30,
+        "name": "Lemons",
+        "select": "Choose lemons with firm, thin, smooth skin, heavy for size."
+    },
+    {
+        "id": 31,
+        "name": "Lettuce",
+        "select": "Choose lettuce with crisp leaves. Avoid brown edges."
+    },
+    {
+        "id": 32,
+        "name": "Lima Beans",
+        "select": "Choose dried beans or beans canned with less sodium. Select dried beans that are dry, firm, clean, uniform in color and not shriveled."
+    },
+    {
+        "id": 33,
+        "name": "Limes",
+        "select": "Choose limes with smooth, shiny skin, heavy for size"
+    },
+    {
+        "id": 34,
+        "name": "Mangos",
+        "select": "Mangoes are available fresh, frozen, canned and dried for good nutrition and convenience. If selecting fresh, always feel the mango to judge its ripeness level. Select mangos at room temperature."
+    },
+    {
+        "id": 35,
+        "name": "Mushrooms",
+        "select": "Mushrooms are available fresh, frozen, canned and dried for good nutrition and convenience. If selecting fresh, choose well shaped mushrooms with firm texture. Avoid spots and slime."
+    },
+    {
+        "id": 36,
+        "name": "Okra",
+        "select": "Okra is available fresh or canned for good nutrition and convenience. If selecting fresh, choose brightly colored firm pods."
+    },
+    {
+        "id": 37,
+        "name": "Onions",
+        "select": "Onions are available fresh and frozen for good nutrition and convenience. If selecting fresh, choose firm onions with dry, bright, smooth outer skins. Avoid bulbs with cuts, bruises, or green sprouts."
+    },
+    {
+        "id": 38,
+        "name": "Oranges",
+        "select": "Choose oranges with firm, smooth skin, heavy for size."
+    },
+    {
+        "id": 39,
+        "name": "Parsnips",
+        "select": "Choose parsnips that are firm and dry without pits. Smaller ones may be more flavorful and tender."
+    },
+    {
+        "id": 40,
+        "name": "Peaches",
+        "select": "Peaches are available fresh, frozen and canned for good nutrition and convenience. If selecting fresh, choose peaches with firm, fuzzy skins that yield to gentle pressure when ripe. Avoid blemishes."
+    },
+    {
+        "id": 41,
+        "name": "Pears",
+        "select": "Pears are available fresh and canned for good nutrition and convenience. If selecting fresh, the best way to judge ripeness for non-Bartlett varieties is to Check the Neck™: Apply pressure to the neck of the pear with your thumb. If it yields to pressure, it’s ripe."
+    },
+    {
+        "id": 42,
+        "name": "Peas",
+        "select": "Peas are available fresh, frozen and canned for good nutrition and convenience. If selecting fresh, choose firm, bright green, medium-sized pods with no signs of decay or wilting."
+    },
+    {
+        "id": 43,
+        "name": "Pineapples",
+        "select": "Pineapples are available fresh, frozen, canned, dried and as 100% juice for good nutrition and convenience. If selecting fresh, choose pineapples with dark green leaves, heavy for size. Avoid soft or dark spots and dry-looking leaves."
+    },
+    {
+        "id": 44,
+        "name": "Plums",
+        "select": "Plums are available fresh and dried for good nutrition and convenience. If selecting fresh, choose plump plums with smooth skins. Avoid bruises and soft spots."
+    },
+    {
+        "id": 45,
+        "name": "Potatoes",
+        "select": "Potatoes are available fresh, frozen and canned for good nutrition and convenience. If selecting fresh, look for clean, smooth, firm-textured potatoes with no cuts, bruises or discoloration."
+    },
+    {
+        "id": 46,
+        "name": "Pumpkins",
+        "select": "Pumpkins are available fresh and canned for good nutrition and convenience. If selecting fresh, choose pumpkins that are firm and heavy for their size."
+    },
+    {
+        "id": 47,
+        "name": "Radishes",
+        "select": "Choose smooth, brightly colored radishes. Attached tops should be green and fresh looking."
+    },
+    {
+        "id": 48,
+        "name": "Raspberries",
+        "select": "Raspberries are available fresh, frozen and dried for good nutrition and convenience. If selecting fresh, choose dry, plump, firm raspberries. Avoid wet or moldy berries."
+    },
+    {
+        "id": 49,
+        "name": "Rhubarb",
+        "select": "Choose flat stalks that are not curled or limp. Deep red stalks are sweeter and richer; tenderness is not related to size."
+    },
+    {
+        "id": 50,
+        "name": "Rutabagas",
+        "select": "Choose rutabagas that are heavy for their size and free of soft spots or cracks."
+    },
+    {
+        "id": 51,
+        "name": "Spinach",
+        "select": "Spinach is available fresh, frozen and canned for good nutrition and convenience. If selecting fresh, choose crisp, green bunches with no insect damage."
+    },
+    {
+        "id": 52,
+        "name": "Strawberries",
+        "select": "Strawberries are available fresh, frozen and dried for good nutrition and convenience. If selecting fresh, choose shiny, firm strawberries with a bright red color. Caps should be fresh, green and intact. Avoid shriveled, mushy or leaky berries."
+    },
+    {
+        "id": 53,
+        "name": "Summer Squash",
+        "select": "Summer squash is available fresh and frozen for good nutrition and convenience. If selecting fresh, choose glossy squash, heavy for size."
+    },
+    {
+        "id": 54,
+        "name": "Sweet Potatoes",
+        "select": "Sweet potatoes are available fresh, frozen and canned for good nutrition and convenience. If selecting fresh, choose firm potatoes with smooth skin. Avoid cracks, soft spots and blemishes."
+    },
+    {
+        "id": 55,
+        "name": "Swiss Chard",
+        "select": "Select chard with fresh green leaves; avoid those that are yellow or discolored."
+    },
+    {
+        "id": 56,
+        "name": "Tomatillos",
+        "select": "Tomatillos are available fresh and canned for good nutrition and convenience. If selecting fresh, look for dry, hard tomatillos with tightly fitting husks that are dry and free of mold."
+    },
+    {
+        "id": 57,
+        "name": "Tomatoes",
+        "select": "Tomatoes are available fresh and canned for good nutrition and convenience. If selecting fresh, choose tomatoes with bright, shiny skins and firm flesh."
+    },
+    {
+        "id": 58,
+        "name": "Turnips",
+        "select": "Select pearly, heavy turnips without soft spots and fresh leaves if still attached. Small to medium ones are sweetest."
+    },
+    {
+        "id": 59,
+        "name": "Watermelon",
+        "select": "You are looking for a firm watermelon that is free from bruises, cuts or dents. Scratching is okay. The watermelon should be very heavy for its size. The underside of the watermelon should have a creamy yellow spot from where it sat on the ground and ripened in the sun. If you want to try the thump, you're listening for a dull, muffled, hollow sound if it's ripe."
+    },
+    {
+        "id": 60,
+        "name": "Yams",
+        "select": "Choose yams that are firm and are without soft spots or bruises."
+    },
+    {
+        "id": 61,
+        "name": "Zucchini",
+        "select": "Look for zucchini with a slightly prickly, but shinny skin. The skin should be firm and free of cuts and bruises."
+    }
+]
