@@ -21,7 +21,7 @@ const styles = {
 const Footer = () => (
     <footer
         id="sticky-footer"
-        className="py-4 bg-light text-black-50 fixed-bottom"
+        className="py-4 bg-light text-black-50"
         style={styles.footer}>
         
         <div className="container text-center justify-content-center">
