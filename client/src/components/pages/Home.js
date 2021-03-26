@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react';
+import React, { Component, useEffect, useState } from 'react';
 import Card from '../Card';
 import produce from '../produce.json';
 import ItemOption from '../ItemOption';
@@ -12,17 +12,28 @@ function Home() {
   const [month,setMonth] = useState("");
   const [fruitList, setFruitList] = useState(produce);
 
+
+
   const handleMonthChange = (event) =>{
     const {value} = event.target;
     setMonth(value);
     console.log(value);
+    // const onSeason = produce.filter(fruit => {return fruit.season.includes(month)});
+    // // const onSeason = produce.filter(fruit => fruit.season.includes(month));
+    // setFruitList(onSeason);
+    // console.log(onSeason);
+    // // console.log(fruitList);
+    // setfruitSearch("");
+  }
+
+  useEffect(()=>{
     const onSeason = produce.filter(fruit => {return fruit.season.includes(month)});
     // const onSeason = produce.filter(fruit => fruit.season.includes(month));
     setFruitList(onSeason);
     console.log(onSeason);
     // console.log(fruitList);
     setfruitSearch("");
-  }
+  },[month])
   // async function handleInputChange(event){
   //   const {value} = event.target;
   //   setfruitSearch(value);
