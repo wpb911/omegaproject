@@ -15,11 +15,12 @@ function Home() {
   const handleMonthChange = (event) =>{
     const {value} = event.target;
     setMonth(value);
-    console.dir(value);
-    const onSeason = produce.filter(fruit => fruit.season.includes(month));
+    console.log(value);
+    const onSeason = produce.filter(fruit => {return fruit.season.includes(month)});
     // const onSeason = produce.filter(fruit => fruit.season.includes(month));
     setFruitList(onSeason);
-    console.log(fruitList);
+    console.log(onSeason);
+    // console.log(fruitList);
     setfruitSearch("");
   }
   // async function handleInputChange(event){
