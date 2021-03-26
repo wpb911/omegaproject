@@ -10,7 +10,7 @@ import { useAuthTokenStore } from "./utils/auth";
 
 const App = () =>
   // Use the hook to reauthenticate stored tokens.
-  useAuthTokenStore();
+  // useAuthTokenStore();
   <div>
     <HashRouter>
       <Nav />
