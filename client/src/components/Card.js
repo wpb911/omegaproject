@@ -1,5 +1,12 @@
 import React from 'react';
 
+const styles = {
+    heart: {
+        maxWidth: 15,
+        maxHeight: "auto"
+    }
+};
+
 const Card = (props) => {
     return (
 <div className="col mb-4">
@@ -7,14 +14,14 @@ const Card = (props) => {
                                 <span>
                                 <a href="#"
                                     className="badge badge-danger float-right">
-                                    <img src={heart} style={styles.heart} />
+                                    <img src={process.env.PUBLIC_URL + props.heart} style={styles.heart} />
                                 </a>
                                 </span>
 
-                                <img
-                                    src="https://www.cmiapples.com/ecom_img/original-6-38-jonagold-apples.jpg"
-                                    className="card-img-top"
-                                    alt="apple" />
+                <img
+                    src="https://www.cmiapples.com/ecom_img/original-6-38-jonagold-apples.jpg"
+                    className="card-img-top"
+                    alt={props.title} />
                         <div className="card-body">
                             <h5 className="card-title">{props.title}</h5>
                                     <p className="card-text">
@@ -24,7 +31,7 @@ const Card = (props) => {
                                     <p className="card-text">
                                         <small className="text-muted">
                                             Nutritional Value: <br />
-                                        Calories: 100
+                                        {props.nutrition}
                                     </small></p>
                             <div className="card-body">
                                         <a href="#" className="card-link">
