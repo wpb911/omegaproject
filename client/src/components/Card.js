@@ -24,7 +24,7 @@ const Card = (props) => {
         </span>
 
         <img
-          src="https://www.cmiapples.com/ecom_img/original-6-38-jonagold-apples.jpg"
+          src={process.env.PUBLIC_URL + props.image}
           className="card-img-top"
           alt={props.title} />
         <div className="card-body">
