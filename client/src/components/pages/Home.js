@@ -128,56 +128,19 @@ function Home() {
 
         {(fruitSearch.length) ?(fruitResult.map(item => (
             <Card
-                  id={item.id}
-                  title={item.name}
-                  select={item.select}
-                  heart={item.heart}
-                  image={item.image}
-                  calories={item.calories}
-                  fat={item.fat}
-                  sugar={item.sugar}
-                  cholesterol={item.cholesterol}
-                  protein={item.protein}
-                  serving={item.serving}/>)))
-          // (<div className="col mb-4">
-          //   <div className="card h-100 text-center">
-          //     <span>
-          //       <a href="#"
-          //         className="badge badge-danger float-right">
-          //         {fruitResult.food ? (<img src={fruitResult.food.image} />)
-          //           :
-          //           (<p>testing</p>)
-
-
-          //         }
-          //         {/* // style={styles.heart}  */}
-          //       </a>
-          //     </span>
-
-          //     {/* <img
-          //                 src={}
-          //                 className="card-img-top"
-          //                 alt={} /> */}
-          //     <div className="card-body">
-          //       <h5 className="card-title">{ }</h5>
-          //       <p className="card-text">
-          //         { }
-          //       </p>
-
-          //       <p className="card-text">
-          //         <small className="text-muted">
-          //           Nutritional Value: <br />
-          //           { }
-          //         </small></p>
-          //       <div className="card-body">
-          //         <a href="#" className="card-link">
-          //           View Recipes
-          //                                               </a>
-          //       </div>
-          //     </div>
-          //   </div>
-          // </div>)
-
+                id={item.id}
+                title={item.name}
+                select={item.select}
+                heart={item.heart}
+                image={item.image}
+                calories={item.calories}
+                fat={item.fat}
+                sugar={item.sugar}
+                cholesterol={item.cholesterol}
+                protein={item.protein}
+                serving={item.serving}
+                season={item.season}/>)))
+          
           :
 
           (fruitList.map(item => (
@@ -192,7 +155,8 @@ function Home() {
                   sugar={item.sugar}
                   cholesterol={item.cholesterol}
                   protein={item.protein}
-                  serving={item.serving}/>
+                  serving={item.serving}
+                  season={item.season}/>
           ))
           )
 
