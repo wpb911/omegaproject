@@ -5,6 +5,8 @@
         "select": "Apples are available fresh, dried and as 100% juice for good nutrition and convenience. If selecting fresh, choose firm, shiny, smooth-skinned apples with intact stems.",
         "season": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
         "heart": "/assets/heart.png"
+        
+
     },
     {
         "id": 2,

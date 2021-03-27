@@ -15,7 +15,7 @@ const Card = (props) => {
   const [foodResult,setFoodResult] = useState({});
   
   useEffect(() =>{
-  RapidApi.getIngredient(props.title,setFoodResult);
+  // RapidApi.getIngredient(props.title,setFoodResult);
   },[])
 
   
@@ -35,7 +35,10 @@ const Card = (props) => {
           className="card-img-top"
           alt={props.title} />
         <div className="card-body">
-          <h5 className="card-title">{foodResult.food.label}</h5>
+
+          {
+        }<h5 className="card-title">{foodResult.food? foodResult.food.label:("")}</h5>
+            
           <p className="card-text">
             {props.select}
           </p>
