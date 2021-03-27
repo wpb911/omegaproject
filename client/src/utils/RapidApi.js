@@ -13,11 +13,12 @@ export default {
     })
       .then(response => {
         // console.log("1111111")
-        // console.log(response);
+        // console.log(response.json);
         // Use this function for checking the status, etc... that it's a 200
         return response.json()
       })
       .then(data => {
+        console.log(data.hints[0])
         // Use this function to actually use the data.
         callback(data.hints[0]);
       })

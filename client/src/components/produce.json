@@ -6,6 +6,7 @@
         "season": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
         "heart": "/assets/heart.png",
         "image": "/assets/apple.jpg"
+
     },
     {
         "id": 2,
