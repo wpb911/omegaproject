@@ -38,7 +38,10 @@ const Card = (props) => {
 
           {
         // }<h5 className="card-title">{foodResult.food? foodResult.food.label:("")}</h5>
-        }<h5 className="card-title">{props.title}</h5>
+        }<h5 className="card-title">
+          {/* <a rel="noreferrer noopener"href={"https://en.wikipedia.org/w/api.php?action=opensearch&search="+props.title+"&limit=1&format=json&origin=*"}>{props.title}</a> */}
+          <a rel="noreferrer noopener"href={"https://en.wikipedia.org/wiki/"+props.title}>{props.title}</a>
+        </h5>
             
           <p className="card-text">
             {props.select}
