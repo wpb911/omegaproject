@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import Home from './components/pages/Home';
 import Account from './components/pages/Account';
 import Hero from './components/Hero';
+import Logo from './components/Logo';
 // Import the useAuthTokenStore hook.
 import { useAuthTokenStore } from "./utils/auth";
 
@@ -15,6 +16,7 @@ const App = () =>
     <HashRouter>
       <Nav />
       <Hero />
+      <Logo />
       <div>
         <Switch>
           <Route exact path={'/'} component={Home} />
