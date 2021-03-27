@@ -168,7 +168,13 @@ function Home() {
                   title={item.name}
                   select={item.select}
                   heart={item.heart}
-                  image={item.image}/>
+                  image={item.image}
+                  calories={item.calories}
+                  fat={item.fat}
+                  sugar={item.sugar}
+                  cholesterol={item.cholesterol}
+                  protein={item.protein}
+                  serving={item.serving}/>
           ))
           )
 
