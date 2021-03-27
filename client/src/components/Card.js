@@ -37,7 +37,8 @@ const Card = (props) => {
         <div className="card-body">
 
           {
-        }<h5 className="card-title">{foodResult.food? foodResult.food.label:("")}</h5>
+        // }<h5 className="card-title">{foodResult.food? foodResult.food.label:("")}</h5>
+        }<h5 className="card-title">{props.title}</h5>
             
           <p className="card-text">
             {props.select}

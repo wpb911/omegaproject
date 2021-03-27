@@ -25,12 +25,24 @@ function Home() {
     const { value } = event.target;
     setMonth(value);
     console.log(value);
+    setfruitSearch("")
     // const onSeason = produce.filter(fruit => {return fruit.season.includes(month)});
     // // const onSeason = produce.filter(fruit => fruit.season.includes(month));
     // setFruitList(onSeason);
     // console.log(onSeason);
     // // console.log(fruitList);
     // setfruitSearch("");
+  }
+
+  const handleInputChange = (event) => {
+    const { value } = event.target;
+    setfruitSearch(value);
+    console.log(fruitSearch);
+
+    // RapidApi.getIngredient(value, setFruitResult);
+    // if (fruitResult == {}) {
+    //   RapidApi.getIngredient(value, setFruitResult);
+    // }
   }
 
   useEffect(() => {
@@ -45,25 +57,19 @@ function Home() {
       setFruitList(produce)
     } else {
       setFruitList(onSeason);
-
     }
-    // const onSeason = produce.filter(fruit => fruit.season.includes(month));
     console.log(onSeason);
-    // console.log(fruitList);
-    setfruitSearch("");
-  }, [month])
 
-  const handleInputChange = (event) => {
-    const { value } = event.target;
-    setfruitSearch(value);
 
-    RapidApi.getIngredient(value, setFruitResult);
-    if (fruitResult == {}) {
-      RapidApi.getIngredient(value, setFruitResult);
+    const selectedFruit = produce.filter(fruit => { return fruit.name==fruitSearch });
 
+    if(fruitSearch=="allProduce"){
+      setFruitResult(produce)
+    } else {
+      setFruitResult(selectedFruit)
     }
-    console.log(fruitResult)
-  }
+
+  }, [month,fruitSearch])
 
   return (
     <div className="container mx-auto">
@@ -95,7 +101,7 @@ function Home() {
           <div className="col-md-5 col-lg-5 col-xl-5 form-group mx-auto">
 
             <select className='form-control' id='all-produce' onChange={handleInputChange}>
-              <option id="0">All Produce</option>
+              <option value="allProduce"id="0">All Produce</option>
 
               {produce.map(item => (
                 <ItemOption
@@ -120,45 +126,51 @@ function Home() {
 
 
 
-        {(fruitSearch.length) ?
-          (<div className="col mb-4">
-            <div className="card h-100 text-center">
-              <span>
-                <a href="#"
-                  className="badge badge-danger float-right">
-                  {fruitResult.food ? (<img src={fruitResult.food.image} />)
-                    :
-                    (<p>testing</p>)
+        {(fruitSearch.length) ?(fruitResult.map(item => (
+            <Card
+                  id={item.id}
+                  title={item.name}
+                  select={item.select}
+                  heart={item.heart}
+                  image={item.image}/>)))
+          // (<div className="col mb-4">
+          //   <div className="card h-100 text-center">
+          //     <span>
+          //       <a href="#"
+          //         className="badge badge-danger float-right">
+          //         {fruitResult.food ? (<img src={fruitResult.food.image} />)
+          //           :
+          //           (<p>testing</p>)
 
 
-                  }
-                  {/* // style={styles.heart}  */}
-                </a>
-              </span>
+          //         }
+          //         {/* // style={styles.heart}  */}
+          //       </a>
+          //     </span>
 
-              {/* <img
-                          src={}
-                          className="card-img-top"
-                          alt={} /> */}
-              <div className="card-body">
-                <h5 className="card-title">{ }</h5>
-                <p className="card-text">
-                  { }
-                </p>
+          //     {/* <img
+          //                 src={}
+          //                 className="card-img-top"
+          //                 alt={} /> */}
+          //     <div className="card-body">
+          //       <h5 className="card-title">{ }</h5>
+          //       <p className="card-text">
+          //         { }
+          //       </p>
 
-                <p className="card-text">
-                  <small className="text-muted">
-                    Nutritional Value: <br />
-                    { }
-                  </small></p>
-                <div className="card-body">
-                  <a href="#" className="card-link">
-                    View Recipes
-                                                        </a>
-                </div>
-              </div>
-            </div>
-          </div>)
+          //       <p className="card-text">
+          //         <small className="text-muted">
+          //           Nutritional Value: <br />
+          //           { }
+          //         </small></p>
+          //       <div className="card-body">
+          //         <a href="#" className="card-link">
+          //           View Recipes
+          //                                               </a>
+          //       </div>
+          //     </div>
+          //   </div>
+          // </div>)
 
           :
 
