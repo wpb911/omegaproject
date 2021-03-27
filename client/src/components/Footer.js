@@ -1,6 +1,6 @@
 import React from 'react';
-import logo from '../assets/logo-placeholder.png';
 import github from '../assets/github-01.png'
+import logo from '../assets/ripe-01.png';
 
 const styles = {
     footer: {
@@ -9,7 +9,7 @@ const styles = {
     },
     logo: {
         height: 75,
-        width: 75
+        width: "auto"
     },
     icon: {
         height: 20,

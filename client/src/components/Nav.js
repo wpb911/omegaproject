@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import logo from '../assets/logo-placeholder.png';
+import logo from '../assets/ripe-01.png';
 
 const styles = {
     nav: {
@@ -9,7 +9,7 @@ const styles = {
         backgroundColor:"white"
     },
     logo: {
-        width: 30,
+        width: "auto",
         height: 30
     },
     links: {

@@ -105,6 +105,7 @@ function Home() {
                   key={item.name}
                 />))}
 
+
             </select>
 
           </div>
@@ -163,10 +164,11 @@ function Home() {
 
           (fruitList.map(item => (
             <Card
-              id={item.id}
-              title={item.name}
-              select={item.select}
-              heart={item.heart} />
+                  id={item.id}
+                  title={item.name}
+                  select={item.select}
+                  heart={item.heart}
+                  image={item.image}/>
           ))
           )
 
