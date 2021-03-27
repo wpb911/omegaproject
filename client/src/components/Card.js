@@ -6,8 +6,12 @@ const styles = {
   heart: {
     maxWidth: 15,
     maxHeight: "auto"
-  }
+    },
+    hr: {
+        //paddingTop: 15
+    }
 };
+
 
 
 
@@ -43,12 +47,17 @@ const Card = (props) => {
           <p className="card-text">
             {props.select}
           </p>
-
-          <p className="card-text">
-            <small className="text-muted">
-              Nutritional Value: <br />
-              {props.nutrition}
-            </small></p>
+            <div style={styles.option}>
+          <p className="card-text" style={styles.option}>
+            <small className="text-muted" style={styles.option}>
+                              <hr style={styles.hr}/><strong>Nutritional Value: </strong><br />
+                          <i>Serving: {props.serving}</i><br/>
+                              {props.calories} <br />
+                              {props.fat} <br />
+                              {props.cholesterol} <br />
+                              {props.sugar} <br />
+                              {props.protein}<hr/>
+            </small></p></div>
           <div className="card-body">
             <a href="#" className="card-link">
               View Recipes
