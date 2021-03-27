@@ -76,12 +76,12 @@ function Home() {
 
       <form className="text-center mx-auto">
         <div className="form-row mx-auto">
-          <div className="col-md-5 col-lg-5 col-xl-5 form-group mx-auto">
+          <div className="col-md-6 col-lg-6 col-xl-6 form-group mx-auto">
 
             <select className='form-control' id='all-produce' onChange={handleMonthChange}>
               <option value={defaultMonth} id="0" href="#">Current Month {`(${defaultMonth})`}</option>
 
-              <option value="allSeason" id="13" href="#">All Season</option>
+              {/* <option value="allSeason" id="13" href="#">All Season</option> */}
               <option value="January" id="1" href="#">January</option>
               <option value="February" id="2">February</option>
               <option value="March" id="3">March</option>
@@ -98,7 +98,7 @@ function Home() {
 
           </div>
 
-          <div className="col-md-5 col-lg-5 col-xl-5 form-group mx-auto">
+          <div className="col-md-6 col-lg-6 col-xl-6 form-group mx-auto">
 
             <select className='form-control' id='all-produce' onChange={handleInputChange}>
               <option value="allProduce"id="0">All Produce</option>
@@ -115,9 +115,9 @@ function Home() {
             </select>
 
           </div>
-          <div className="col-fluid form-group">
+          {/* <div className="col-fluid form-group">
             <span><button className="btn form-group float-right pull-right justify-content-end btn-secondary btn-small">Search</button></span>
-          </div>
+          </div> */}
         </div>
       </form>
 
@@ -132,7 +132,13 @@ function Home() {
                   title={item.name}
                   select={item.select}
                   heart={item.heart}
-                  image={item.image}/>)))
+                  image={item.image}
+                  calories={item.calories}
+                  fat={item.fat}
+                  sugar={item.sugar}
+                  cholesterol={item.cholesterol}
+                  protein={item.protein}
+                  serving={item.serving}/>)))
           // (<div className="col mb-4">
           //   <div className="card h-100 text-center">
           //     <span>
