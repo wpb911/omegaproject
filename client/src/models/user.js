@@ -13,6 +13,17 @@ const userSchema = new Schema({
         required: true,
         unique: true
     },
+    email:{
+      type:String,
+      unique:true,
+      trim:true,
+      required:true,
+      match: [/.+@.+\..+/, "Please enter a valid e-mail address"]
+    },
+    date:{
+      type:Date,
+      default:Date.now
+    },
     favorites: [
         new Schema({
             title: {
