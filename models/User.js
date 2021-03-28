@@ -1,0 +1,27 @@
+const mongoose = require("mongoose");
+// require('mongoose-type-email');
+const Schema = mongoose.Schema;
+
+const userSchema = new Schema(
+  {
+    email:{
+      type:String,
+      unique:true,
+      trim:true,
+      required:true,
+      match: [/.+@.+\..+/, "Please enter a valid e-mail address"]
+    },
+    password:{
+      type:String,
+      trim:true,
+      required:true
+    },
+    favorites:{
+      type:Array
+    }
+  }
+)
+
+const User = mongoose.model("User",userSchema);
+
+module.exports = User;
