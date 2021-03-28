@@ -35,7 +35,7 @@ class API {
      */
     register( userData ) {
 
-        return this.axios.post("/api/register", userData);
+        return this.axios.post("/api/user/register", userData);
 
     }
 
