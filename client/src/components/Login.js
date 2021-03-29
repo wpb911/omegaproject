@@ -3,28 +3,6 @@ import "./login.css";
 import auth from "../utils/auth";
 import api from "../utils/register-api";
 
-
-// const SignIn = () => {
-//     const [inputEmail, setEmail] = useState("");
-//     const [inputPassword, setPassword] = useState("");
-//     // console.log(inputEmail, inputPassword);
-
-//     const handleSubmit = e => {
-//       e.preventDefault();
-//     }
-// }
-
-// const SignUp = () =>{
-//   const [signupEmail, setNewEmail] = useState("");
-//   const[signupName, setName] = useState("");
-//   const [signupPassword, setNewPassword] = useState("");
-//   const [verifyPassword, verifyNewPassword] = useState("");
-//   console.log(signupName, signupEmail, signupPassword, verifyPassword);
-//   const handleSubmit = e => {
-//     e.preventDefault();
-//   }
-// }
-
 const Login = () => {
   // Gets old user info
   const [inputEmail, setEmail] = useState("");
@@ -44,8 +22,8 @@ const Login = () => {
     e.preventDefault();
     console.log(inputEmail, inputPassword);
     console.log(signupName, signupEmail, signupPassword, verifyPassword);
-    const email = inputEmail;
-    const password = inputPassword;
+    const email = signupEmail;
+    const password = signupPassword;
     // try {
     // <----------- API Authenitcation is HERE ------------->
     // api({email, password})
@@ -56,7 +34,7 @@ const Login = () => {
     //     // error -
     //   });
     try {
-      await api.register({});
+      await api.register({email,password});
 
     } catch (err) {
       console.log(err)
@@ -77,6 +55,7 @@ const Login = () => {
     console.log(id);
     setsignUpForm(id === 'btn-signup' ? false : true)
   }, [])
+
   return (
 
     <div id="logreg-forms">
@@ -126,3 +105,26 @@ const Login = () => {
 }
 
 export default Login;
+
+
+
+// const SignIn = () => {
+//     const [inputEmail, setEmail] = useState("");
+//     const [inputPassword, setPassword] = useState("");
+//     // console.log(inputEmail, inputPassword);
+
+//     const handleSubmit = e => {
+//       e.preventDefault();
+//     }
+// }
+
+// const SignUp = () =>{
+//   const [signupEmail, setNewEmail] = useState("");
+//   const[signupName, setName] = useState("");
+//   const [signupPassword, setNewPassword] = useState("");
+//   const [verifyPassword, verifyNewPassword] = useState("");
+//   console.log(signupName, signupEmail, signupPassword, verifyPassword);
+//   const handleSubmit = e => {
+//     e.preventDefault();
+//   }
+// }

@@ -8,13 +8,13 @@ const userSchema = new Schema(
       type:String,
       unique:true,
       trim:true,
-      required:true,
+      // required:true,
       match: [/.+@.+\..+/, "Please enter a valid e-mail address"]
     },
     password:{
       type:String,
       trim:true,
-      required:true
+      // required:true
     },
     favorites:{
       type:Array
