@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 
 const mongoose = require("mongoose");
@@ -12,6 +13,11 @@ app.use(express.json());
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
+const passport = require("passport");
+
+app.use(passport.initialize());
+// Passport config
+passport.use( require("./config/jwtPassportStrategy") );
 // Add routes, both API and view
 app.use(routes);
 
