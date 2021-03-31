@@ -2,8 +2,19 @@ import React, { Component, useEffect, useState } from 'react';
 import Card from '../Card';
 import produce from '../produce.json';
 import ItemOption from '../ItemOption';
+import calendar from '../../assets/calendar.png';
 import RapidApi from "../../utils/RapidApi";
 
+
+const styles = {
+    search: {
+        marginBottom: 25
+    },
+    icon: {
+        maxWidth: 15,
+        maxHeight: "auto"
+    }
+}
 
 
 function Home() {
@@ -76,13 +87,19 @@ function Home() {
 
       <form className="text-center mx-auto">
         <div className="form-row mx-auto">
-          <div className="col-md-6 col-lg-6 col-xl-6 form-group mx-auto">
+                  <div className="col-md-6 col-lg-6 col-xl-6 form-group mx-auto">
 
-            <select className='form-control' id='all-produce' onChange={handleMonthChange}>
-              <option value={defaultMonth} id="0" href="#">Current Month {`(${defaultMonth})`}</option>
+                      
+
+                   
+                      <select className='form-control selectpicker' style={styles.search} id='all-produce' onChange={handleMonthChange}>
+                          
+                          <option value={defaultMonth} id="0" >    
+                          
+                          Current Month {`(${defaultMonth})`}</option>
 
               {/* <option value="allSeason" id="13" href="#">All Season</option> */}
-              <option value="January" id="1" href="#">January</option>
+              <option value="January" id="1">January</option>
               <option value="February" id="2">February</option>
               <option value="March" id="3">March</option>
               <option value="April" id="4">April</option>
