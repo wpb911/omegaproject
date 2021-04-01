@@ -26,7 +26,9 @@ const Login = () => {
     try {
       // await api.register({ signupEmail, signupPassword });
       console.log(inputEmail, inputPassword)
-      await login({inputEmail,inputPassword});
+      const email = inputEmail;
+      const password = inputPassword;
+      await login({email,password});
     } catch (err) {
       console.log(err)
     }
