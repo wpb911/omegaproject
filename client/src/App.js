@@ -19,7 +19,7 @@ const App = () => {
   return (
 
     <div>
-      <HashRouter>
+      <Router>
         <Nav />
         <Hero />
         <Logo />
@@ -27,10 +27,12 @@ const App = () => {
           <Switch>
             
           <Route exact path='/' component={Home} />
+          <Route exact path={'/recipe'} component={Recipe} />
+          
           <GuestRoute exact path='/account' redirectTo="/" component={Account} />
           </Switch>
 
-          {/* <Route exact path={'/recipe'} component={Recipe} /> */}
+          
 
           {/* <Switch>
           <GuestRoute exact path='/account' redirectTo="/" component={Account} />
@@ -38,7 +40,7 @@ const App = () => {
           </Switch> */}
         </div>
         <Footer />
-      </HashRouter>
+      </Router>
     </div>
   )
 
