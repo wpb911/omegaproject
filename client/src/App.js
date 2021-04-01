@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router,HashRouter, Route, Switch } from 'react-router-dom';
+
 import Nav from './components/Nav';
 import Footer from './components/Footer';
 import Home from './components/pages/Home';
@@ -19,7 +20,7 @@ const App = () => {
   return (
 
     <div>
-      <HashRouter>
+      <Router>
         <Nav />
         <Hero />
         <Logo />
@@ -38,7 +39,7 @@ const App = () => {
           </Switch> */}
         </div>
         <Footer />
-      </HashRouter>
+      </Router>
     </div>
   )
 
