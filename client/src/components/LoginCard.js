@@ -3,7 +3,7 @@ import "./login.css";
 import auth from "../utils/auth";
 import api from "../utils/register-api";
 
-const Login = () => {
+const LoginCard = () => {
   // Gets old user info
   const [inputEmail, setEmail] = useState("");
   const [inputPassword, setPassword] = useState("");
@@ -104,7 +104,7 @@ const Login = () => {
   )
 }
 
-export default Login;
+export default LoginCard;
 
 
 

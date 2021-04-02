@@ -5,7 +5,8 @@ import logo from '../assets/ripe-01.png';
 const styles = {
     footer: {
         backgroundColor:"white",
-        flexShrink:"none"
+        flexShrink: "none",
+        marginTop: 30
     },
     logo: {
         height: 75,
