@@ -89,10 +89,12 @@ const Card = (props) => {
                               {props.protein}<hr/>
             </small></p></div>
           <div className="card-body text-center">
+
             <button onClick= {getRecipe} className="btn btn-primary btn-block card-link">
               View Recipes
                                         </button>
             {/* <a onClick= {getRecipe} href='/recipe' className="btn btn-primary btn-block card-link">
+
               View Recipes
                                         </a> */}
           </div>

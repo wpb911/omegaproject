@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import logo from '../assets/ripe-01.png';
+import Home from '../components/pages/Home'
 
 const styles = {
     nav: {
@@ -26,13 +27,14 @@ function Nav() {
     return (
         <nav className='navbar fixed-top navbar-expand-lg navbar-light' style={styles.nav}>
         <a
-            className='navbar-brand'>
+            className='navbar-brand' href={Home}>
             
             <img
-                src={logo}
-                alt="logo"
-                loading="lazy"
-                style={styles.logo}/>
+                    src={logo}
+                    alt="logo"
+                    loading="lazy"
+                    style={styles.logo}
+                    />
         </a>
         
         <button
@@ -63,8 +65,8 @@ function Nav() {
                 </li>
                 
                 <li className="nav-item" style={styles.links}>
-                        <Link to="/account"
-                            className={location.pathname === "/account" ? 'nav-item nav-link active' : 'nav-item nav-link'}>
+                        <Link to="/login"
+                            className={location.pathname === "/login" ? 'nav-item nav-link active' : 'nav-item nav-link'}>
                                 Account
                         </Link>
                 </li>
