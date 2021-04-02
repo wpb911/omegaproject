@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import logo from '../assets/ripe-01.png';
 import Home from '../components/pages/Home'
+import LogoutButton from './LogoutButton';
 
 const styles = {
     nav: {
@@ -69,6 +70,9 @@ function Nav() {
                             className={location.pathname === "/login" ? 'nav-item nav-link active' : 'nav-item nav-link'}>
                                 Account
                         </Link>
+                </li>
+                <li className="nav-item" style={styles.links}>
+                  <Link className={location.pathname === "/login" ? 'nav-item nav-link active' : 'nav-item nav-link'}> <LogoutButton /></Link>
                 </li>
             </ul>
         </div>    
