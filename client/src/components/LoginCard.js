@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import "./login.css";
+import { useLogin } from "../utils/auth"
 import auth from "../utils/auth";
 import api from "../utils/register-api";
 
@@ -8,7 +9,7 @@ const LoginCard = () => {
   const [inputEmail, setEmail] = useState("");
   const [inputPassword, setPassword] = useState("");
   // console.log(inputEmail, inputPassword);
-
+  const login = useLogin();
   // Saves new user info
   const [signupEmail, setNewEmail] = useState("");
   const [signupName, setName] = useState("");
@@ -18,35 +19,47 @@ const LoginCard = () => {
   // Tries to use login component
 
   // Handles error
-  const handleSubmit = async e => {
+  const handleLoginSubmit = async e => {
+    e.preventDefault();
+    console.log(inputEmail, inputPassword);
+    console.log(signupName, signupEmail, signupPassword, verifyPassword);
+    try {
+      // await api.register({ signupEmail, signupPassword });
+      console.log(inputEmail, inputPassword)
+      const email = inputEmail;
+      const password = inputPassword;
+      await login({email,password});
+    } catch (err) {
+      console.log(err)
+    }
+  };
+
+  // if(inputEmail){
+  //   const email = signupEmail;
+  //   const password = signupPassword;
+  //   try {
+  //     // await api.register({email,password});
+  //     await login({email,password});
+  //   } catch (err) {
+  //     console.log(err)
+  //   }
+  // }
+
+
+  const handleSignUpSubmit = async e => {
     e.preventDefault();
     console.log(inputEmail, inputPassword);
     console.log(signupName, signupEmail, signupPassword, verifyPassword);
     const email = signupEmail;
     const password = signupPassword;
-    // try {
-    // <----------- API Authenitcation is HERE ------------->
-    // api({email, password})
-    //   .then((data) => {
-    //     // success - here
-    //   })
-    //   .catch(() => {
-    //     // error -
-    //   });
     try {
-      await api.register({email,password});
-
+      await api.register({ email, password });
+      await login({ email, password });
     } catch (err) {
       console.log(err)
     }
+  };
 
-    //User has been successfully logged in and added to state.  Perform any additional actions you need here such as redirecting to a new page.
-    // } catch (err) {
-    // handle error responses from the API
-    // if (err.response && err.response.data) console.log(err.response.data);
-    // }
-    // 
-  }
 
   // Switches between Login/Signup --> Should be broken into 2 components
   const [signUpForm, setsignUpForm] = React.useState(true)
@@ -62,7 +75,7 @@ const LoginCard = () => {
       {
         signUpForm
           ? (
-            <form className="form-signin" onSubmit={handleSubmit} data-component="Form-Signin">
+            <form className="form-signin" onSubmit={handleLoginSubmit} data-component="Form-Signin">
               <h1 className="h3 mb-3 font-weight-normal" style={{ textAlign: 'center' }}> Sign in </h1>
               <div className="social-login">
                 <button className="btn facebook-btn social-btn text-center" type="button"><span><i className="fab fa-facebook-f" /> Sign in with Facebook </span></button>
@@ -71,7 +84,7 @@ const LoginCard = () => {
               <p style={{ textAlign: 'center' }}>OR</p>
               <input type="email" onChange={(e) => setEmail(e.target.value)} id="inputEmail" className="form-control" placeholder="Email address" required autoFocus />
               <input type="password" onChange={(e) => setPassword(e.target.value)} id="inputPassword" className="form-control" placeholder="Password" required />
-              <button className="btn btn-success btn-block" onSubmit={handleSubmit} type="submit"><i className="fas fa-sign-in-alt" /> Sign in </button>
+              <button className="btn btn-success btn-block" onSubmit={handleLoginSubmit} type="submit"><i className="fas fa-sign-in-alt" /> Sign in </button>
               <hr />
               <button className="btn btn-primary btn-block" type="button" id="btn-signup" onClick={onFormChange}>
                 <i className="fas fa-user-plus" /> Sign up with New Account
@@ -79,7 +92,7 @@ const LoginCard = () => {
             </form>
           )
           : (
-            <form action="/signup/" onSubmit={handleSubmit} className="form-signin">
+            <form action="/signup/" onSubmit={handleSignUpSubmit} className="form-signin">
               <div className="social-login" style={{ textAlign: 'center' }}>
                 <button className="btn facebook-btn social-btn" type="button"><span><i className="fab fa-facebook-f" /> Sign up with Facebook </span></button>
               </div>
@@ -99,8 +112,6 @@ const LoginCard = () => {
       {/* <br />
               <p style={{textAlign: 'center'}} /> */}
     </div>
-
-
   )
 }
 

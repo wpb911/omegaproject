@@ -6,8 +6,11 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 import { StoreProvider } from "./store";
 
 ReactDOM.render(
+  <React.StrictMode>
+
     <StoreProvider>
         <App />
-    </StoreProvider> ,       
+    </StoreProvider>
+  </React.StrictMode>,
     document.getElementById('root')
 );
