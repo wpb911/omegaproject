@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import produce from '../produce.json';
-import Login from '../Login';
+import LoginCard from '../LoginCard';
 // import Box from '@material-ui/core/Box';
 
 
-class Account extends Component {
+class Login extends Component {
 
     state = {
         produce
@@ -14,11 +14,11 @@ class Account extends Component {
         return (
             <div className="container mx-auto">
 
-                <Login />
+                <LoginCard />
 
             </div>
         )
     }
 }
 
-export default Account;
+export default Login;

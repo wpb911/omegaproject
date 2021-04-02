@@ -1,25 +1,58 @@
-import React, { useState } from 'react';
+import React, { Component } from 'react';
 import recipeApi from '../../utils/recipeApi';
 import RecipeCard from '../RecipeCard';
 
 
-const Recipe = (props) => {
-    const [recipes, setRecipes] = useState([]);
+class Recipe extends Component {
+    state = {
+        recipes: [],
+        search: ""
+    };
+
+    handleInputChange = (e) => {
+        this.setState({ search: e.target.value })
+    };
+
+    handleSearch = (e) => {
+        e.preventDefault();
+        this.setState({ search: e.target.value })
+
+        recipeApi.getRecipes(this.state.search)
+            .then((res) => {
+                if (res.data.items === "error") {
+                    throw new Error(res.data.items);
+                } else {
+                    let results = res.data.items;
+                    console.log(results);
+                    results = results.map((recipes) => {
+                        recipes = {
+                            key: res.recipe.label,
+                            title: res.recipe.label,
+                            image: res.recipe.image,
+                            ingredients: res.recipe.ingredientLines,
+                            url: res.recipe.url
+                        };
+                        return recipes;
+                    });
+                    this.setState({ recipes: results, search: "" })
+                }
+            })
+    };
 
    
     
-    
-    return (
-        <div className="container">
+    render() {
+        return (
+            <div className="container">
+                <div className="row col-fluid">
+                    <RecipeCard />
 
-            <div className="row row-cols-1 row-cols-md-3">
-                <RecipeCard />
+</div>
+                </div>
 
-
-            </div>
-
-        </div>
-    )
+            
+        )
+    }
 }
 
 export default Recipe;

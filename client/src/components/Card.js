@@ -81,7 +81,7 @@ const Card = (props) => {
                               {props.protein}<hr/>
             </small></p></div>
           <div className="card-body text-center">
-            <a href='/recipe' className="btn btn-primary btn-block card-link">
+            <a href='/recipe' className="btn btn-primary btn-block card-link" onClick={(e) => props.handleSearch(e)}>
               View Recipes
                                         </a>
           </div>
