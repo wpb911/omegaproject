@@ -1,37 +1,45 @@
 import React, { useEffect, useState } from 'react';
 import RapidApi from "../utils/RapidApi";
 import { useStoreContext } from '../store';
+import { SET_CURRENT_RECIPE } from "../store/actions";
+import recipeApi from "../utils/recipeApi";
+import { useHistory } from "react-router-dom";
 
 const styles = {
   heart: {
     maxWidth: 15,
-        maxHeight: "auto",
-    },
-    hr: {
-        //paddingTop: 15
-    },
-    badge: {
-        marginRight: 5,
-        marginTop: 5
-    },
-    expand: {
-        maxWidth: 13,
-        maxHeight: "auto",
-        marginLeft: 10
-    }
+    maxHeight: "auto",
+  },
+  hr: {
+    //paddingTop: 15
+  },
+  badge: {
+    marginRight: 5,
+    marginTop: 5
+  },
+  expand: {
+    maxWidth: 13,
+    maxHeight: "auto",
+    marginLeft: 10
+  }
 };
 
-
-
-
 const Card = (props) => {
-  const [foodResult,setFoodResult] = useState({});
+  const [ ,dispatch ] = useStoreContext();
+  const history = useHistory();
   
   useEffect(() =>{
   // RapidApi.getIngredient(props.title,setFoodResult);
   },[])
 
-  
+  const getRecipe = async event =>{
+    // Start loading indicator here
+    const { recipe } = await recipeApi.getRecipes(props.title);
+    // Stop loading indicator here
+    dispatch({ type: SET_CURRENT_RECIPE, payload: recipe });
+    // Also save to local storage so we can handle refresh on recipe card.
+    history.push("/recipe")
+  }
 
   return (
     <div className="col mb-4">
@@ -81,9 +89,14 @@ const Card = (props) => {
                               {props.protein}<hr/>
             </small></p></div>
           <div className="card-body text-center">
-            <a href='/recipe' className="btn btn-primary btn-block card-link" onClick={(e) => props.handleSearch(e)}>
+
+            <button onClick= {getRecipe} className="btn btn-primary btn-block card-link">
               View Recipes
-                                        </a>
+                                        </button>
+            {/* <a onClick= {getRecipe} href='/recipe' className="btn btn-primary btn-block card-link">
+
+              View Recipes
+                                        </a> */}
           </div>
         </div>
       </div>

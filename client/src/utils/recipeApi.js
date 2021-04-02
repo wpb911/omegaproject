@@ -1,7 +1,25 @@
 import axios from 'axios';
 
 export default {
+
     getRecipes: function (query) {
-        return axios.get(`https://api.edamam.com/search?q=${query}&app_id=${process.env.RECIPE_ID}&app_key=${process.env.RECIPE_KEY}&health=vegetarian`)
-    }
-};
+        // fetch(`https://api.edamam.com/search?q=${query}&app_id=${process.env.RECIPE_ID}&app_key=${process.env.RECIPE_KEY}&health=vegetarian`,{
+        return fetch(`https://api.edamam.com/search?q=${query}&app_id=b6ab5a66&app_key=20b5c8c234f54b26b93a27807b0390b1&health=vegetarian`,{
+          "method":"GET"
+        })
+        .then(response => {
+          return response.json()
+        })
+        .then(data =>{
+          console.log(query);
+          console.log(data.hits[0]);
+          return data.hits[0];
+        })
+        .catch(err =>{
+          console.error(err);
+        })
+      }
+    };
+
+
+// return axios.get(`https://api.edamam.com/search?q=${query}&app_id=${process.env.RECIPE_ID}&app_key=${process.env.RECIPE_KEY}&health=vegetarian`)
