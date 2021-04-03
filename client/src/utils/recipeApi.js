@@ -11,8 +11,8 @@ export default {
         })
         .then(data =>{
           console.log(query);
-          console.log(data.hits[0]);
-          return data.hits[0];
+          console.log(data);
+          return data.hits;
         })
         .catch(err =>{
           console.error(err);
