@@ -28,7 +28,7 @@ const RecipeCard = ({ recipe }) => {
                 <div className="card-body">
                 <span>
             <a href="#"
-              className="badge badge-danger float-right" style={styles.badge}>
+              className="badge float-right" style={styles.badge}>
               <img src={process.env.PUBLIC_URL + "/assets/heart.png"} style={styles.heart} />
             </a>
           </span>

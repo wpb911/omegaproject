@@ -28,7 +28,7 @@ const styles = {
 const Card = (props) => {
   const [ ,dispatch ] = useStoreContext();
   const history = useHistory();
-  const user = useAuthenticatedUser();
+    const user = useAuthenticatedUser();
   
 
   useEffect(() =>{
@@ -67,7 +67,7 @@ const Card = (props) => {
       <div className="card h-100 ">
         <span onClick={addIntoUser}>
           <a href="#" 
-                      className="badge badge-danger float-right"
+                      className="badge float-right"
                   style={styles.badge}>
             <img src={getHeartIcon()} style={styles.heart} />
           </a>
