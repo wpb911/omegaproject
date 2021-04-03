@@ -1,5 +1,5 @@
 import React from 'react';
-import github from '../assets/github-01.png'
+import github from '../assets/github.png'
 import logo from '../assets/ripe-01.png';
 
 const styles = {

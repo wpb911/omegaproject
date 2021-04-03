@@ -1,6 +1,7 @@
 import React, { Component, useEffect, useState } from 'react';
 import Card from '../Card';
 import produce from '../produce.json';
+import { useStoreContext } from '../../store';
 import ItemOption from '../ItemOption';
 import calendar from '../../assets/calendar.png';
 import RapidApi from "../../utils/RapidApi";
@@ -20,6 +21,7 @@ const styles = {
 
 
 function Home() {
+  const user = useAuthenticatedUser();
   const monthNames = ["January", "February", "March", "April", "May", "June",
     "July", "August", "September", "October", "November", "December"
   ];
@@ -83,6 +85,10 @@ function Home() {
     }
 
   }, [month,fruitSearch])
+
+  useEffect(() => {
+    console.log("Our user:", user)
+  }, [user])
 
   return (
     <div className="container mx-auto">
@@ -150,7 +156,6 @@ function Home() {
                 id={item.id}
                 title={item.name}
                 select={item.select}
-                heart={item.heart}
                 image={item.image}
                 calories={item.calories}
                 fat={item.fat}
@@ -158,16 +163,15 @@ function Home() {
                 cholesterol={item.cholesterol}
                 protein={item.protein}
                 serving={item.serving}
+                isFavorited={user && user.favorites.includes(item.name)}
                 season={item.season}/>)))
           
           :
-
           (fruitList.map(item => (
             <Card
                   id={item.id}
                   title={item.name}
                   select={item.select}
-                  heart={item.heart}
                   image={item.image}
                   calories={item.calories}
                   fat={item.fat}
@@ -175,6 +179,7 @@ function Home() {
                   cholesterol={item.cholesterol}
                   protein={item.protein}
                   serving={item.serving}
+                  isFavorited={user && user.favorites.includes(item.name)}
                   season={item.season}/>
           ))
           )
