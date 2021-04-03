@@ -58,8 +58,8 @@ const Card = (props) => {
 
   const getHeartIcon = () => {
     return props.isFavorited
-      ? process.env.PUBLIC_URL + "/heartFilled.png"
-      : process.env.PUBLIC_URL + "/heart.png"
+      ? process.env.PUBLIC_URL + "/assets/heartFilled.png"
+      : process.env.PUBLIC_URL + "/assets/heart.png"
   }
 
   return (
