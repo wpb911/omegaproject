@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import RapidApi from "../utils/RapidApi";
 import { useStoreContext } from '../store';
-import { SET_CURRENT_RECIPE } from "../store/actions";
+import { SET_CURRENT_RECIPE, SET_FAVORITES } from "../store/actions";
 import recipeApi from "../utils/recipeApi";
 import { useHistory } from "react-router-dom";
 import {useAuthenticatedUser} from '../utils/auth';
@@ -44,15 +44,22 @@ const Card = (props) => {
     history.push("/recipe")
   }
 
-  const addIntoUser = (event)=>{
+  const addIntoUser = async (event)=>{
     event.preventDefault();
     const id = user._id;
-    console.log(id);
     const title = props.title;
-    console.log(title);
-      apiCalls.addFavorite({ id: id, title: title });
-      
+    try {
+      const { data: newFavorites } = await apiCalls.addFavorite({id:id,title:title});
+      dispatch({ type: SET_FAVORITES, payload: newFavorites });
+    } catch (err) {
+      console.error(err) // TODO: Handle this with a message to the user.
+    }
+  }
 
+  const getHeartIcon = () => {
+    return props.isFavorited
+      ? process.env.PUBLIC_URL + "/heartFilled.png"
+      : process.env.PUBLIC_URL + "/heart.png"
   }
 
   return (
@@ -62,7 +69,7 @@ const Card = (props) => {
           <a href="#" 
                       className="badge float-right"
                   style={styles.badge}>
-            <img src={process.env.PUBLIC_URL + props.heart} style={styles.heart} />
+            <img src={getHeartIcon()} style={styles.heart} />
           </a>
         </span>
 

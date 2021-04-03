@@ -9,9 +9,9 @@ module.exports = {
     console.dir(req.body);
     console.log(req.params.id);
     db.User
-    .findOneAndUpdate({_id:req.params.id},{$push:{favorites:req.body.title}})
+    .findOneAndUpdate({_id:req.params.id},{$push:{favorites:req.body.title}}, {new: true})
     .then(response =>{
-      res.json(response)
+      res.json(response.favorites)
     })
     .catch(err =>{
       res.json(err);
