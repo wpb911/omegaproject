@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
 import Home from './components/pages/Home';
-//import Account from './components/pages/Login';
+import Account from './components/pages/Account';
 import Recipe from './components/pages/Recipe'
 import Hero from './components/Hero';
 import Logo from './components/Logo';
@@ -28,9 +28,10 @@ const App = () => {
           <Switch>
             
           <Route exact path='/' component={Home} />
+          <Route exact path = "/account" component= {Account} />
           <Route exact path={'/recipe'} component={Recipe} />
           
-          <GuestRoute exact path='/login' redirectTo="/" component={Login} />
+          <GuestRoute exact path='/login' redirectTo="/account" component={Login} />
           </Switch>
         </div>
         <Footer />

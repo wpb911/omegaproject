@@ -37,7 +37,7 @@ const Card = (props) => {
 
   const getRecipe = async event =>{
     // Start loading indicator here
-    const { recipe } = await recipeApi.getRecipes(props.title);
+    const recipe  = await recipeApi.getRecipes(props.title);
     // Stop loading indicator here
     dispatch({ type: SET_CURRENT_RECIPE, payload: recipe });
     // Also save to local storage so we can handle refresh on recipe card.
