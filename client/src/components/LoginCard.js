@@ -21,11 +21,8 @@ const LoginCard = () => {
   // Handles error
   const handleLoginSubmit = async e => {
     e.preventDefault();
-    console.log(inputEmail, inputPassword);
-    console.log(signupName, signupEmail, signupPassword, verifyPassword);
+
     try {
-      // await api.register({ signupEmail, signupPassword });
-      console.log(inputEmail, inputPassword)
       const email = inputEmail;
       const password = inputPassword;
       await login({email,password});
@@ -34,22 +31,8 @@ const LoginCard = () => {
     }
   };
 
-  // if(inputEmail){
-  //   const email = signupEmail;
-  //   const password = signupPassword;
-  //   try {
-  //     // await api.register({email,password});
-  //     await login({email,password});
-  //   } catch (err) {
-  //     console.log(err)
-  //   }
-  // }
-
-
   const handleSignUpSubmit = async e => {
     e.preventDefault();
-    console.log(inputEmail, inputPassword);
-    console.log(signupName, signupEmail, signupPassword, verifyPassword);
     const email = signupEmail;
     const password = signupPassword;
     try {
@@ -65,7 +48,6 @@ const LoginCard = () => {
   const [signUpForm, setsignUpForm] = React.useState(true)
   const onFormChange = React.useCallback((evt) => {
     const id = evt.target.id
-    console.log(id);
     setsignUpForm(id === 'btn-signup' ? false : true)
   }, [])
 
@@ -117,25 +99,3 @@ const LoginCard = () => {
 
 export default LoginCard;
 
-
-
-// const SignIn = () => {
-//     const [inputEmail, setEmail] = useState("");
-//     const [inputPassword, setPassword] = useState("");
-//     // console.log(inputEmail, inputPassword);
-
-//     const handleSubmit = e => {
-//       e.preventDefault();
-//     }
-// }
-
-// const SignUp = () =>{
-//   const [signupEmail, setNewEmail] = useState("");
-//   const[signupName, setName] = useState("");
-//   const [signupPassword, setNewPassword] = useState("");
-//   const [verifyPassword, verifyNewPassword] = useState("");
-//   console.log(signupName, signupEmail, signupPassword, verifyPassword);
-//   const handleSubmit = e => {
-//     e.preventDefault();
-//   }
-// }
