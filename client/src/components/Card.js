@@ -4,7 +4,8 @@ import { useStoreContext } from '../store';
 import { SET_CURRENT_RECIPE } from "../store/actions";
 import recipeApi from "../utils/recipeApi";
 import { useHistory } from "react-router-dom";
-
+import {useAuthenticatedUser} from '../utils/auth';
+import apiCalls from "../utils/API";
 const styles = {
   heart: {
     maxWidth: 15,
@@ -27,7 +28,9 @@ const styles = {
 const Card = (props) => {
   const [ ,dispatch ] = useStoreContext();
   const history = useHistory();
+  const user = useAuthenticatedUser();
   
+
   useEffect(() =>{
   // RapidApi.getIngredient(props.title,setFoodResult);
   },[])
@@ -41,11 +44,20 @@ const Card = (props) => {
     history.push("/recipe")
   }
 
+  const addIntoUser = (event)=>{
+    event.preventDefault();
+    const id = user._id;
+    console.log(id);
+    const title = props.title;
+    console.log(title);
+    apiCalls.addFavorite({id:id,title:title});
+  }
+
   return (
     <div className="col mb-4">
       <div className="card h-100 ">
-        <span>
-          <a href="#"
+        <span onClick={addIntoUser}>
+          <a href="#" 
                       className="badge badge-danger float-right"
                   style={styles.badge}>
             <img src={process.env.PUBLIC_URL + props.heart} style={styles.heart} />
