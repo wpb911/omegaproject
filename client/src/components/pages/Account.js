@@ -9,7 +9,13 @@ import {useLogout} from "../../utils/auth";
 const styles = {
   hr: {
     paddingBottom: 10
-}
+  },
+  button: {
+    backgroundColor: "#830a16",
+    border: "none",
+    textAlign: "center",
+    paddingBottom: 15
+  }
 }
 
 function Account() {
@@ -46,7 +52,7 @@ function Account() {
       ))}
       </div>
       <hr style={styles.hr}/>
-          <button className="btn btn-danger float-right" onClick={useLogout()}>Logout</button><br/>
+      <button className="btn btn-danger float-right" style={styles.button} onClick={useLogout()}>Logout</button><br/>
       </div>
   )
   
