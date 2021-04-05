@@ -45,7 +45,7 @@ function Account() {
           season={item.season} />
       ))}
       </div>
-      <hr/>
+      <hr style={styles.hr}/>
           <button className="btn btn-danger float-right" onClick={useLogout()}>Logout</button><br/>
       </div>
   )
