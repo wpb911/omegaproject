@@ -4,6 +4,13 @@ import FavoriteRecipes from "../FavoriteRecipes";
 import Card from '../Card';
 import produce from '../produce.json';
 import { useAuthenticatedUser } from '../../utils/auth';
+import {useLogout} from "../../utils/auth";
+
+const styles = {
+  hr: {
+    paddingBottom: 10
+}
+}
 
 function Account() {
   const user = useAuthenticatedUser();
@@ -16,6 +23,11 @@ function Account() {
   console.log(userFavorite)
 
   return (
+    <div className="container mx-auto">
+      <p className="display-4">
+        Favorite Fruits
+      </p>
+      <hr style={styles.hr}/>
     <div className="row row-cols-1 row-cols-md-3">
       {userFavorite.map(item => (
         <Card
@@ -32,6 +44,9 @@ function Account() {
           isFavorited={user && user.favorites.includes(item.name)}
           season={item.season} />
       ))}
+      </div>
+      <hr/>
+          <button className="btn btn-danger float-right" onClick={useLogout()}>Logout</button><br/>
       </div>
   )
   
