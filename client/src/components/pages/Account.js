@@ -46,7 +46,7 @@ function Account() {
       ))}
       </div>
       <hr style={styles.hr}/>
-          <button className="btn btn-danger float-right" onClick={useLogout()}>Logout</button><br/>
+          <button className="btn btn-danger float-right" onClick={useLogout()}>Logout</button><br/><br/>
       </div>
   )
   
