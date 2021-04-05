@@ -11,7 +11,9 @@ import {useAuthenticatedUser, useIsAuthenticated} from '../../utils/auth';
 
 const styles = {
     search: {
-        marginBottom: 25
+        marginBottom: 25,
+        backgroundColor: "#006838",
+        color: "white"
     },
     icon: {
         maxWidth: 15,
@@ -19,6 +21,10 @@ const styles = {
     },
     hr: {
         paddingBottom: 10
+    },
+    search2: {
+        backgroundColor: "#006838",
+        color: "white",
     }
 }
 
@@ -103,9 +109,9 @@ function Home() {
                       
 
                    
-                      <select className='form-control selectpicker'  id='all-produce' onChange={handleMonthChange}>
+                      <select className='form-control selectpicker' id='all-produce' style={styles.search2} onChange={handleMonthChange}>
                           
-                          <option value={defaultMonth} id="0" >    
+                          <option value={defaultMonth} id="0" >   
                           
                           Current Month {`(${defaultMonth})`}</option>
 

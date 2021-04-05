@@ -8,7 +8,14 @@ const styles = {
   },
   badge: {
     marginLeft: 5
-  }
+    },
+    button: {
+        backgroundColor: "#006838",
+        border: "none"
+    },
+    header: {
+        color: "#830a16"
+    }
 };
 
 
@@ -37,7 +44,7 @@ const RecipeCard = ({ recipe }) => {
 
               {
                 // }<h5 className="card-title">{foodResult.food? foodResult.food.label:("")}</h5>
-              }<h6 className="card-title">
+              }<h6 className="card-title" style={styles.header}>
                 {/* <a rel="noreferrer noopener"href={"https://en.wikipedia.org/w/api.php?action=opensearch&search="+props.title+"&limit=1&format=json&origin=*"}>{props.title}</a> */}
                 {hit.recipe.label}
               </h6>
@@ -54,7 +61,7 @@ const RecipeCard = ({ recipe }) => {
 
                   </small></p></div><br />
               <div className="card-body">
-                <a href={hit.recipe.url} className="card-link btn btn-sm btn-secondary">
+                <a href={hit.recipe.url} className="card-link btn btn-sm btn-secondary" style={styles.button}>
                   View Full Recipe
                                           </a>
 

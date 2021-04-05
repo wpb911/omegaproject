@@ -22,7 +22,14 @@ const styles = {
     maxWidth: 13,
     maxHeight: "auto",
     marginLeft: 10
-  }
+    },
+    button: {
+        backgroundColor: "#006838",
+        border: "none"
+    },
+    link: {
+        color: "#830a16" 
+    }
 };
 
 const Card = (props) => {
@@ -81,9 +88,9 @@ const Card = (props) => {
 
           {
         // }<h5 className="card-title">{foodResult.food? foodResult.food.label:("")}</h5>
-        }<h5 className="card-title text-center">
+        }<h5 className="card-title text-center" >
           {/* <a rel="noreferrer noopener"href={"https://en.wikipedia.org/w/api.php?action=opensearch&search="+props.title+"&limit=1&format=json&origin=*"}>{props.title}</a> */}
-                      <a target="_blank" rel="noreferrer noopener" href={"https://en.wikipedia.org/wiki/" + props.title}>{props.title}
+                      <a target="_blank" rel="noreferrer noopener" href={"https://en.wikipedia.org/wiki/" + props.title} style={styles.link}>{props.title}
                       
                       <span>
                           <img
@@ -111,7 +118,7 @@ const Card = (props) => {
             </small></p></div>
           <div className="card-body text-center">
 
-            <button onClick= {getRecipe} className="btn btn-primary btn-block card-link">
+                      <button onClick={getRecipe} style={styles.button} className="btn btn-primary btn-block card-link">
               View Recipes
                                         </button>
             {/* <a onClick= {getRecipe} href='/recipe' className="btn btn-primary btn-block card-link">
