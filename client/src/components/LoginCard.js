@@ -103,7 +103,7 @@ const LoginCard = () => {
               <input type="password" onChange={(e) => setNewPassword(e.target.value)} id="user-pass" className="form-control" placeholder="Password" required autoFocus />
               <input type="password" onChange={(e) => verifyNewPassword(e.target.value)} id="user-repeatpass" className="form-control" placeholder="Confirm Password" required autoFocus />
               <button className="btn btn-primary btn-block" type="submit" style={styles.button} ><i className="fas fa-user-plus"  style={styles.i} /> Sign Up </button><br/>
-              <button id="btn-back" className="fas fa-angle-left btn-sm" type="button" onClick={onFormChange}>Back</button>
+              <button id="btn-back" className="fas fa-angle-left btn-sm" type="button" onClick={onFormChange} style={styles.button}>Back</button>
             </form>
           )
       }

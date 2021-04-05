@@ -14,7 +14,7 @@ const styles = {
     backgroundColor: "#830a16",
     border: "none",
     textAlign: "center",
-    paddingBottom: 15
+    marginBottom: 15
   }
 }
 
