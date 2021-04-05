@@ -15,7 +15,13 @@ const styles = {
     },
     header: {
         color: "#830a16"
-    }
+    },
+    expand: {
+        maxWidth: 11,
+        maxHeight: "auto",
+        marginLeft: 10,
+        verticalAlign: "baseline"
+        },
 };
 
 
@@ -62,8 +68,15 @@ const RecipeCard = ({ recipe }) => {
                   </small></p></div><br />
               <div className="card-body">
                 <a href={hit.recipe.url} className="card-link btn btn-sm btn-secondary" style={styles.button}>
-                  View Full Recipe
-                                          </a>
+                              View Full Recipe
+                                           
+                              <span>
+                          <img
+                              src={process.env.PUBLIC_URL + '/assets/resize.png'}
+                              alt='Open in new tab'
+                              style={styles.expand}/>
+                      </span></a>
+                                          
 
 
               </div>
