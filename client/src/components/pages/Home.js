@@ -16,6 +16,9 @@ const styles = {
     icon: {
         maxWidth: 15,
         maxHeight: "auto"
+    },
+    hr: {
+        paddingBottom: 10
     }
 }
 
@@ -100,7 +103,7 @@ function Home() {
                       
 
                    
-                      <select className='form-control selectpicker' style={styles.search} id='all-produce' onChange={handleMonthChange}>
+                      <select className='form-control selectpicker'  id='all-produce' onChange={handleMonthChange}>
                           
                           <option value={defaultMonth} id="0" >    
                           
@@ -125,7 +128,7 @@ function Home() {
 
           <div className="col-md-6 col-lg-6 col-xl-6 form-group mx-auto">
 
-            <select className='form-control' id='all-produce' onChange={handleInputChange}>
+            <select className='form-control' id='all-produce' onChange={handleInputChange} style={styles.search}>
               <option value="allProduce"id="0">All Produce</option>
 
               {produce.map(item => (
@@ -190,7 +193,8 @@ function Home() {
 
 
 
-      </div>
+          </div>
+
     </div>
   )
 }
