@@ -71,9 +71,9 @@ function Nav() {
                                 Account
                         </Link>
                 </li>
-                <li className="nav-item" style={styles.links}>
+                {/* <li className="nav-item" style={styles.links}>
                   <Link className={location.pathname === "/login" ? 'nav-item nav-link active' : 'nav-item nav-link'}> <LogoutButton /></Link>
-                </li>
+                </li> */}
             </ul>
         </div>    
         </nav>
