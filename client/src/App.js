@@ -9,6 +9,7 @@ import Hero from './components/Hero';
 import Logo from './components/Logo';
 import Login from './components/pages/Login'
 import GuestRoute from './components/GuestRoute'
+import PrivateRoute from "./components/PrivateRoute";
 // Import the useAuthTokenStore hook.
 import { useAuthTokenStore, useIsAuthenticated } from "./utils/auth";
 
@@ -28,9 +29,8 @@ const App = () => {
           <Switch>
             
           <Route exact path='/' component={Home} />
-          <Route exact path = "/account" component= {Account} />
+          <PrivateRoute exact path = "/account" redirectTo="/login" component= {Account} />
           <Route exact path={'/recipe'} component={Recipe} />
-          
           <GuestRoute exact path='/login' redirectTo="/account" component={Login} />
           </Switch>
         </div>
