@@ -25,6 +25,9 @@ const styles = {
     search2: {
         backgroundColor: "#006838",
         color: "white",
+  },
+  head: {
+      fontSize: 34
     }
 }
 
@@ -103,6 +106,7 @@ function Home() {
     <div className="container mx-auto">
 
       <form className="text-center mx-auto">
+        <p className="display-4" style={styles.head}>Your favorite produce, in season.</p><br/>
         <div className="form-row mx-auto">
                   <div className="col-md-6 col-lg-6 col-xl-6 form-group mx-auto">
 
