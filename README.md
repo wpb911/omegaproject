@@ -1,4 +1,4 @@
-# omegaproject
+# Ripe
 
 
 ## Description
